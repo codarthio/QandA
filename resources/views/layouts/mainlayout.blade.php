@@ -6,6 +6,6 @@
 <body>
 
 @yield('content')
-@include('layouts.partials.footer-scripts')
+
  </body>
 </html>
