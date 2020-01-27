@@ -8,11 +8,12 @@ class Question extends Model
 {
     //
     protected $fillable = [
-        'question_text'
-
+      'question_text'
     ];
 
+
+
     public function answers(){
-        return $this->hasMany(Answer::class)->orderBy('created_at', DESC)
+        return $this->hasMany(Answer::class)->orderBy('created_at', DESC);
     }
 }
