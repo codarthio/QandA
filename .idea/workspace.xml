@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdf2f33a-3d5a-41d6-a0ba-998b91751c2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/question/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/question/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Answer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainlayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainlayout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,8 +151,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/resources/views/index.blade.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kyody\Documents\code\QandA\resources\views\question" />
+      <recent name="C:\Users\kyody\Documents\code\QandA\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kyody\Documents\code\QandA\resources\views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -144,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580016287024</updated>
-      <workItem from="1580016293838" duration="25405000" />
+      <workItem from="1580016293838" duration="69743000" />
     </task>
     <servers />
   </component>
@@ -152,6 +188,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="601" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580229250687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580229250687" />
     <state x="979" y="205" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580146179452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -160,17 +200,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="194" y="255" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580049018374" />
+    <state x="615" y="130" width="1236" height="751" key="DiffContextDialog" timestamp="1580166167575">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="615" y="130" width="1236" height="751" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580166167575" />
     <state x="98" y="286" key="EditFileWatcherDialog" timestamp="1580021931308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="98" y="286" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580021931308" />
+    <state x="1013" y="261" key="FileChooserDialogImpl" timestamp="1580166052838">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1013" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580166052838" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580016310575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580016310575" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1580146122756">
+    <state x="665" y="231" key="run.anything.popup" timestamp="1580328121189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580146122756" />
+    <state x="665" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580328121189" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1580331766222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580331766222" />
   </component>
 </project>

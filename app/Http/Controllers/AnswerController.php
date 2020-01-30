@@ -36,6 +36,11 @@ class AnswerController extends Controller
     public function store(Request $request)
     {
         //
+        Answer::create([
+            'answer_text' => $request->answer_text,
+            'question_id' => $request->question_id
+
+        ]);
     }
 
     /**

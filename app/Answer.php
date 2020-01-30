@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     //
+    protected $fillable = [
+        'answer_text',
+        'question_id'
+    ];
 
     public function question(){
-        return $this->hasOne(Question::class);
+        return $this->belongsTo('App\Question');
     }
 }

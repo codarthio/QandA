@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Example;
+use App\Http\Requests\StoreQuestionRequest;
 use App\Question;
+use Illuminate\Support\Facades\Validator;
+
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 class QuestionController extends Controller
 {
@@ -15,6 +20,10 @@ class QuestionController extends Controller
     public function index()
     {
         //
+        $placeholder = $this->newExample();
+
+        $questions = Question::all();
+        return view('question.index', compact('questions', 'placeholder'));
 
     }
 
@@ -40,7 +49,33 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'question_text' => 'required|min:5|ends_with:?'
+        ];
+        $messages = [
+            'required' => 'Question cannot be blank.',
+            'min' => 'It needs to be a little longer than that (5 characters minimum).',
+            'ends_with' => 'A proper question ends with a \'?\', and we are nothing but proper vegans here.'
+
+        ];
+
+        $validator = Validator::make($request->all(),$rules, $messages);
+        if($validator->fails()){
+            return redirect(\route('question.index'))
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+        Question::create([
+            'question_text' => $request->question_text
+        ]);
+
+
+        $placeholder = $this->newExample();
+        $questions = Question::all();
+        return view('question.index', compact('questions', 'placeholder'));
+
     }
 
     /**
@@ -52,6 +87,14 @@ class QuestionController extends Controller
     public function show(Question $question)
     {
         //
+        $answers = $question->answers();
+
+
+        return view('question.show', compact('question', 'answers'));
+
+
+
+
     }
 
     /**
@@ -86,5 +129,10 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         //
+    }
+
+    private function newExample(){
+        $example = new Example;
+        return $example->randomExample();
     }
 }
