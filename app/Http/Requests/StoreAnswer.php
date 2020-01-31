@@ -24,8 +24,15 @@ class StoreAnswer extends FormRequest
     public function rules()
     {
         return [
-            'answer_text' => 'required'
+            'answer_text' => 'required|min:5'
 
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'required' => 'Question cannot be blank.',
+            'min' => 'It needs to be a little longer than that (5 characters minimum).'
         ];
     }
 }

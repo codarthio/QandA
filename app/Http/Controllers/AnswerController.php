@@ -41,12 +41,12 @@ class AnswerController extends Controller
 
         $validated = $request->validated();
 
-        $question = Question::find($validated->question);
+        $question = Question::find($request['question']);
 
 
 
         $question->answers()->create([
-            'answer_text' => $validated->answer_text,
+            'answer_text' => $validated['answer_text']
 
         ]);
 

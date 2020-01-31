@@ -1,7 +1,7 @@
 @extends('layouts.mainlayout')
 
 @section('content')
-
+@parent
 
 
 
@@ -29,14 +29,20 @@
 
                <div class="d-flex flex-md-wrap">
                    @foreach($question->answers as $answer)
-                   <div class="card col-12 mt-3 shadow-sm">
-                       <div class="align-text-top text-secondary small mt-1">
-                           Answered on {{$answer->created_at}}
+                   <div class="card mt-3 shadow-sm d-flex col-12">
+                       <div class="col-12">
+                           <div class="align-text-top text-secondary small mt-1">
+                               {{$answer->created_at->format('d-m-Y H:i')}}
+                           </div>
+                           <div class="blockquote">
+                               {{$answer->answer_text}}
+                           </div>
+                           @include('layouts.upvotelayout')
                        </div>
-                       <div class="blockquote align-content-center">
-                           {{$answer->answer_text}}
-                       </div>
+
+
                    </div>
+
                    @endforeach
                    <div class="card col-12 shadow-sm mb-2 mt-3 pt-3 justify-content-between">
                        <form method="post" action="{{route('answer.store', ['question' => $question->id])}}">

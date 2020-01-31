@@ -1,7 +1,7 @@
 @extends('layouts.mainlayout')
 
 @section('content')
-
+@parent
 
     <div class="container">
         <div class="row">
@@ -49,12 +49,15 @@
 
                     <div class="pt-3 border-bottom">
                         <div class=" d-flex justify-content-between">
-                            <div class="col-10">
+                            <div class="col-8">
                                 <a href="/Question/{{$question->id}}" class="card-link stretched-link text-decoration-none text-primary font-weight-bolder pb-3">
                                     {{$question->question_text}}
                                 </a>
                             </div>
-                            <div class="bg-primary text-center text-white col-2 m-1">{{$question->answers->count()}} Answers</div>
+
+                            <div class="bg-primary text-center text-white col-2 m-1 mb-4 small">{{$question->answers->count()}} Answers</div>
+
+
                         </div>
 
                     </div>

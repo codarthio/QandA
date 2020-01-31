@@ -6,3 +6,4 @@
 <!-- Bootstrap core CSS -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<script src="public/js/vote.js"></script>
