@@ -14,6 +14,6 @@ class Question extends Model
 
 
     public function answers(){
-        return $this->hasMany('App\Question')->orderBy('created_at', 'DESC');
+        return $this->hasMany('App\Answer')->orderBy('created_at', 'DESC');
     }
 }

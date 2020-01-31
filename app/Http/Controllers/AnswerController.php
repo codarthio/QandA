@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Answer;
+use App\Http\Requests\StoreAnswer;
+use App\Question;
 use Illuminate\Http\Request;
 
 class AnswerController extends Controller
@@ -30,17 +32,31 @@ class AnswerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request  $question
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreAnswer $request)
     {
         //
-        Answer::create([
-            'answer_text' => $request->answer_text,
-            'question_id' => $request->question_id
+
+        $validated = $request->validated();
+
+        $question = Question::find($validated->question);
+
+
+
+        $question->answers()->create([
+            'answer_text' => $validated->answer_text,
 
         ]);
+
+
+
+
+
+        return redirect('/Question/' . $question->id);
+
+
     }
 
     /**
@@ -52,6 +68,7 @@ class AnswerController extends Controller
     public function show(Answer $answer)
     {
         //
+
     }
 
     /**

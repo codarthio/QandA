@@ -15,5 +15,6 @@ Route::get('/', function (){
 });
 
 Route::get('/Question', 'QuestionController@index')->name('question.index');
-Route::get('/Question/{question}', 'QuestionController@show')->name('question.show');
 Route::post('/Question', 'QuestionController@store')->name('question.store');
+Route::get('/Question/{question}', 'QuestionController@show')->name('question.show');
+Route::post('/Question/{question}', 'AnswerController@store')->name('answer.store');

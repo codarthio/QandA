@@ -13,13 +13,15 @@ class CreateAnswers extends Migration
      */
     public function up()
     {
+
         Schema::create('answers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('question_id');
+            $table->unsignedBigInteger('question_id')->index();
+
             $table->string('answer_text');
             $table->timestamps();
 
-            $table->index('question_id');
+            $table->foreign('question_id')->references('id')->on('questions');
         });
     }
 

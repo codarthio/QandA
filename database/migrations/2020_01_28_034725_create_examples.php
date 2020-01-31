@@ -18,6 +18,9 @@ class CreateExamples extends Migration
             $table->string('example');
             $table->timestamps();
         });
+
+        $seed = new DatabaseSeeder();
+        $seed->run();
     }
 
     /**
