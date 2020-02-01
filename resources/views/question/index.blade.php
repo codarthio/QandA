@@ -53,6 +53,9 @@
                                 <a href="/Question/{{$question->id}}" class="card-link stretched-link text-decoration-none text-primary font-weight-bolder pb-3">
                                     {{$question->question_text}}
                                 </a>
+                                <div class="text-secondary align-baseline pb-1">
+                                    {{$question->created_at->format('d-m-Y H:i')}}
+                                </div>
                             </div>
 
                             <div class="bg-primary text-center text-white col-2 m-1 mb-4 small">{{$question->answers->count()}} Answers</div>

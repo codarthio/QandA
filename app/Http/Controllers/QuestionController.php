@@ -24,7 +24,7 @@ class QuestionController extends Controller
         $placeholder = $this->newExample();
 
 
-        $questions = Question::all();
+        $questions = Question::orderBy('created_at', 'DESC')->get();
 
         return view('question.index', compact('questions', 'placeholder'));
 
@@ -65,7 +65,7 @@ class QuestionController extends Controller
 
         $placeholder = $this->newExample();
         $questions = Question::with('answers')->get();
-        return view('question.index', compact('questions', 'placeholder'));
+        return redirect('/Question');
 
     }
 

@@ -5,6 +5,21 @@
 
 
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @if($errors->count() > 1)
+                    <h5>Oops, looks like we have a couple of problems...</h5>
+                @else
+                    <h5>Just one problem...</h5>
+                @endif
+                @foreach ($errors->all() as $error)
+                    <li class="text-decoration-none">{{ $error }}</li>
+                @endforeach
+
+            </ul>
+        </div>
+    @endif
     <div class="container">
 
         <div>
@@ -64,4 +79,15 @@
                </div>
         </div>
     </div>
+<script >
+    function upvote(img) {
+        var id = document.getElementById(img).value;
+        id.src.toggle('public\\assets\\images\\upvote_icons\\cow_orange.png')
+    }
+
+    function downvote(img) {
+        var id = document.getElementById(img).value;
+        id.src.toggle('public\\assets\\images\\upvote_icons\\burger_blue.png');
+    }
+</script>
 @endsection
